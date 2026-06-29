@@ -1,36 +1,223 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 AI App Generator
 
-## Getting Started
+An AI-powered full-stack web application that generates complete application blueprints from a simple text prompt.
 
-First, run the development server:
+Users describe their idea in one sentence, and the AI generates:
+
+- 📄 Application Pages
+- 🧩 UI Components
+- 🔗 API Endpoints
+- 🗄 Database Schema
+- ⚙️ Development Workflow
+
+Built using **Next.js 16**, **TypeScript**, **Tailwind CSS**, **Prisma**, **PostgreSQL**, and **Groq AI**.
+
+---
+
+# ✨ Features
+
+- 🤖 AI-powered application generation
+- 📝 Prompt-based app creation
+- 📋 Generated pages and components preview
+- 📚 History of previously generated applications
+- 🔍 Search generated applications
+- 🌙 Dark / Light mode
+- 📱 Fully responsive design
+- ⚡ Fast UI with modern animations
+- 📥 Download generated specifications
+- 📋 Copy generated output
+- ✅ Schema validation using Zod
+
+---
+
+# 🛠 Tech Stack
+
+### Frontend
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Lucide React
+
+### Backend
+
+- Next.js API Routes
+- Prisma ORM
+- PostgreSQL (Neon)
+
+### AI
+
+- Groq API
+- Llama 3
+
+### Validation
+
+- Zod
+
+### Notifications
+
+- Sonner Toast
+
+---
+
+# 📂 Project Structure
+
+```
+app/
+ ├── api/
+ │   ├── generate/
+ │   ├── apps/
+ │   ├── repair/
+ │   └── validate/
+ │
+ ├── apps/
+ │
+ └── page.tsx
+
+components/
+ ├── app-generator/
+ ├── layout/
+ ├── providers/
+ └── ui/
+
+lib/
+services/
+validators/
+utils/
+prompts/
+types/
+hooks/
+prisma/
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/ai-app-generator.git
+```
+
+Move into the project
+
+```bash
+cd ai-app-generator
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create a `.env` file
+
+```env
+DATABASE_URL=your_database_url
+GROQ_API_KEY=your_groq_api_key
+```
+
+Generate Prisma Client
+
+```bash
+npx prisma generate
+```
+
+Push database schema
+
+```bash
+npx prisma db push
+```
+
+Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 🚀 Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start production server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm start
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 📸 Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Add screenshots of:
+
+- Home Page
+- AI Generation
+- Generated Preview
+- Recent Applications
+- Dark Mode
+
+---
+
+# 🧠 How It Works
+
+1. User enters an application idea.
+2. Request is sent to the Groq API.
+3. AI generates a structured application blueprint.
+4. Output is validated using Zod.
+5. Data is stored using Prisma.
+6. Generated applications are displayed in the history section.
+7. Users can reopen previous generations anytime.
+
+---
+
+# 📌 Example Prompt
+
+```
+Build a College Management System with Student Login, Faculty Dashboard, Attendance Management, Exams, and Course Registration.
+```
+
+---
+
+# 🌟 Future Improvements
+
+- User Authentication
+- Export as PDF
+- Generate React Components
+- Generate Database SQL
+- AI Chat Assistant
+- Deployment Templates
+- Version History
+- Team Collaboration
+
+---
+
+# 👨‍💻 Author
+
+**Jai Pratap Singh**
+
+B.Tech Computer Science & Engineering
+
+---
+
+# 📄 License
+
+This project is developed for educational and internship demonstration purposes.
+
+---
+
+## ⭐ If you like this project, consider giving it a star.
