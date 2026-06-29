@@ -1,64 +1,65 @@
 # 🚀 AI App Generator
 
-An AI-powered full-stack web application that generates complete application blueprints from a simple text prompt.
+An AI-powered full-stack web application that transforms natural language prompts into structured application blueprints.
 
-Users describe their idea in one sentence, and the AI generates:
+The application uses **Groq AI** to generate complete software planning documents, including application pages, UI components, APIs, and database structure. Generated projects are stored in a PostgreSQL database using Prisma ORM and can be revisited through the application history.
 
-- 📄 Application Pages
-- 🧩 UI Components
-- 🔗 API Endpoints
-- 🗄 Database Schema
-- ⚙️ Development Workflow
+## 🌐 Live Demo
 
-Built using **Next.js 16**, **TypeScript**, **Tailwind CSS**, **Prisma**, **PostgreSQL**, and **Groq AI**.
+**Live Application:** https://ai-app-generator-smoky.vercel.app/
+
+**GitHub Repository:** https://github.com/JPS133/ai-app-generator
 
 ---
 
 # ✨ Features
 
-- 🤖 AI-powered application generation
-- 📝 Prompt-based app creation
-- 📋 Generated pages and components preview
-- 📚 History of previously generated applications
-- 🔍 Search generated applications
-- 🌙 Dark / Light mode
-- 📱 Fully responsive design
-- ⚡ Fast UI with modern animations
-- 📥 Download generated specifications
-- 📋 Copy generated output
-- ✅ Schema validation using Zod
+* 🤖 AI-powered application blueprint generation
+* 📝 Prompt-based application creation
+* 📄 Automatic page generation
+* 🧩 UI component planning
+* 🔌 REST API suggestions
+* 🗄 Database schema generation
+* 💾 PostgreSQL storage using Prisma ORM
+* 📚 History of generated applications
+* 🔍 Search previously generated apps
+* 🌙 Dark & Light theme
+* 📱 Fully responsive interface
+* 📋 Copy generated blueprint
+* ⬇ Download blueprint as JSON
+* ✅ Schema validation using Zod
 
 ---
 
 # 🛠 Tech Stack
 
-### Frontend
+## Frontend
 
-- Next.js 16
-- React
-- TypeScript
-- Tailwind CSS
-- Shadcn UI
-- Lucide React
+* Next.js 16
+* React
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+* Lucide React
 
-### Backend
+## Backend
 
-- Next.js API Routes
-- Prisma ORM
-- PostgreSQL (Neon)
+* Next.js API Routes
+* Prisma ORM
+* PostgreSQL (Neon)
 
-### AI
+## AI
 
-- Groq API
-- Llama 3
+* Groq API
+* Llama 3
 
-### Validation
+## Validation
 
-- Zod
+* Zod
 
-### Notifications
+## Notifications
 
-- Sonner Toast
+* Sonner
 
 ---
 
@@ -66,80 +67,95 @@ Built using **Next.js 16**, **TypeScript**, **Tailwind CSS**, **Prisma**, **Post
 
 ```
 app/
- ├── api/
- │   ├── generate/
- │   ├── apps/
- │   ├── repair/
- │   └── validate/
- │
- ├── apps/
- │
- └── page.tsx
+│
+├── api/
+│   ├── apps/
+│   ├── generate/
+│   ├── repair/
+│   └── validate/
+│
+├── apps/
+├── globals.css
+├── layout.tsx
+└── page.tsx
 
 components/
- ├── app-generator/
- ├── layout/
- ├── providers/
- └── ui/
+├── app-generator/
+├── layout/
+├── providers/
+└── ui/
 
-lib/
-services/
-validators/
-utils/
-prompts/
-types/
+constants/
 hooks/
+lib/
 prisma/
+prompts/
+public/
+services/
+types/
+utils/
+validators/
 ```
 
 ---
 
-# ⚙️ Installation
+# 🚀 Getting Started
 
-Clone the repository
+## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ai-app-generator.git
+git clone https://github.com/JPS133/ai-app-generator.git
 ```
-
-Move into the project
 
 ```bash
 cd ai-app-generator
 ```
 
-Install dependencies
+---
+
+## 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-Create a `.env` file
+---
+
+## 3. Configure Environment Variables
+
+Create a `.env` file in the project root.
 
 ```env
 DATABASE_URL=your_database_url
+
 GROQ_API_KEY=your_groq_api_key
 ```
 
-Generate Prisma Client
+---
+
+## 4. Generate Prisma Client
 
 ```bash
 npx prisma generate
 ```
 
-Push database schema
+---
+
+## 5. Push Database Schema
 
 ```bash
 npx prisma db push
 ```
 
-Run development server
+---
+
+## 6. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Visit
+Open:
 
 ```
 http://localhost:3000
@@ -147,13 +163,15 @@ http://localhost:3000
 
 ---
 
-# 🚀 Build for Production
+# 🏗 Production Build
+
+Create an optimized production build.
 
 ```bash
 npm run build
 ```
 
-Start production server
+Run the production server.
 
 ```bash
 npm start
@@ -161,48 +179,72 @@ npm start
 
 ---
 
-# 📸 Screenshots
-
-Add screenshots of:
-
-- Home Page
-- AI Generation
-- Generated Preview
-- Recent Applications
-- Dark Mode
-
----
-
-# 🧠 How It Works
+# ⚙ How It Works
 
 1. User enters an application idea.
-2. Request is sent to the Groq API.
+2. The prompt is sent to the Groq AI API.
 3. AI generates a structured application blueprint.
-4. Output is validated using Zod.
-5. Data is stored using Prisma.
-6. Generated applications are displayed in the history section.
-7. Users can reopen previous generations anytime.
+4. The response is validated using Zod.
+5. Prisma stores the generated blueprint in PostgreSQL.
+6. Users can browse previous generations through the history section.
 
 ---
 
 # 📌 Example Prompt
 
 ```
-Build a College Management System with Student Login, Faculty Dashboard, Attendance Management, Exams, and Course Registration.
+Build a College Management System with Student Login, Faculty Dashboard, Attendance Management, Course Registration and Examination Module.
 ```
 
 ---
 
-# 🌟 Future Improvements
+# 📋 Generated Output Includes
 
-- User Authentication
-- Export as PDF
-- Generate React Components
-- Generate Database SQL
-- AI Chat Assistant
-- Deployment Templates
-- Version History
-- Team Collaboration
+* Application Overview
+* Application Description
+* Pages
+* Components
+* Suggested APIs
+* Database Schema
+* Development Blueprint
+
+---
+
+# 🎯 Future Improvements
+
+* User Authentication
+* Team Collaboration
+* PDF Export
+* React Code Generation
+* SQL Schema Generation
+* Version History
+* Share Generated Blueprints
+* Live Wireframe Preview
+
+---
+
+# 📚 Learning Outcomes
+
+This project demonstrates practical experience with:
+
+* Full Stack Development
+* Next.js App Router
+* REST API Development
+* AI Integration
+* Prompt Engineering
+* Database Design
+* Prisma ORM
+* PostgreSQL
+* TypeScript
+* Tailwind CSS
+* Responsive UI Design
+* Production Deployment
+
+---
+
+# 🚀 Deployment
+
+The application is deployed on Vercel using automatic GitHub deployments. Vercel provides seamless deployment for Next.js applications with support for environment variables and serverless API routes.
 
 ---
 
@@ -212,12 +254,19 @@ Build a College Management System with Student Login, Faculty Dashboard, Attenda
 
 B.Tech Computer Science & Engineering
 
+Passionate about Full-Stack Development, Artificial Intelligence, and Building Real-World Software Projects.
+
+* GitHub: https://github.com/JPS133
+* Project: https://github.com/JPS133/ai-app-generator
+
 ---
 
 # 📄 License
 
-This project is developed for educational and internship demonstration purposes.
+This project was developed for educational purposes and as part of an AI Software Engineer internship assignment.
 
 ---
 
-## ⭐ If you like this project, consider giving it a star.
+## ⭐ Support
+
+If you found this project useful, consider giving the repository a ⭐ on GitHub.
